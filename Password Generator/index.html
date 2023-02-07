@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="password-generate">
+        <div class="title">
+          <h2>Password Generator</h2>
+        </div>
+        <div class="password-show">
+          <h2 class="text"></h2><i class="fa-solid fa-copy"></i>
+        </div>
+        <div class="password-edit">
+          <div class="password-length">
+            <input type="range" min="0" max="30" value="5" class="range" oninput="rangeFnc()"><br>
+            <p>password length: <span id="value-range"></span></p>
+          </div>
+          <div class="checkbox-content">
+            <div class="password-lower">
+              <input type="checkbox" id="check1">
+              <label for="check1">Lowecase [a-z]</label>
+            </div>
+            <div class="password-upper">
+              <input type="checkbox" id="check2">
+              <label for="check2">Uppercase [A-Z]</label>
+            </div>
+            <div class="password-number">
+              <input type="checkbox" id="check3">
+              <label for="check3">Number [1-9]</label>
+
+            </div>
+            <div class="password-symbol">
+              <input type="checkbox" id="check4">
+              <label for="check4">Symbol [&$@]</label>
+            </div>
+          </div>
+        </div>
+        <div class="generate">
+          <button class="generate-btn">Generate</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
